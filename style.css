@@ -1,0 +1,1268 @@
+/* =========================
+AI STUDY ASSISTANT
+========================= */
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 30px 15px;
+font-family: Arial, sans-serif;
+background: #f4f6fb;
+color: #222;
+}
+
+.container {
+width: 100%;
+max-width: 720px;
+margin: 0 auto;
+padding: 30px;
+background: white;
+border-radius: 20px;
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+h1 {
+margin-top: 0;
+margin-bottom: 8px;
+text-align: center;
+font-size: 32px;
+}
+
+.container > p {
+text-align: center;
+color: #666;
+margin-top: 0;
+}
+
+h3 {
+margin-top: 25px;
+}
+
+
+/* =========================
+TOPIC INPUT
+========================= */
+
+#topicInput {
+width: 100%;
+padding: 15px;
+margin: 10px 0 15px;
+border: 1px solid #ccc;
+border-radius: 12px;
+font-size: 16px;
+outline: none;
+}
+
+#topicInput:focus {
+border-color: #4f7cff;
+box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
+}
+
+
+/* =========================
+BUTTONS
+========================= */
+
+button {
+width: 100%;
+padding: 13px 16px;
+margin: 7px 0;
+border: none;
+border-radius: 12px;
+color: white;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition:
+transform 0.15s ease,
+opacity 0.15s ease,
+box-shadow 0.15s ease;
+}
+
+button:hover {
+opacity: 0.92;
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+transform: translateY(0);
+}
+
+button:disabled {
+cursor: default;
+transform: none;
+box-shadow: none;
+opacity: 0.65;
+}
+
+
+/* =========================
+BUTTON COLORS
+========================= */
+
+/* 📖 Start Studying - Blue */
+#studyButton,
+#imageStudyButton {
+background: #4f7cff;
+}
+
+/* 📝 Take a Quiz - Green */
+#quizButton,
+#imageQuizButton {
+background: #22a06b;
+}
+
+/* 🧠 Flashcards - Orange */
+#flashcardButton,
+#imageFlashcardButton {
+background: #f59e0b;
+}
+
+/* 📷 Upload - Purple */
+#imageButton {
+background: #8b5cf6;
+}
+
+/* 📚 History - Light Blue */
+#historyButton {
+background: #60a5fa;
+}
+
+/* 📊 Progress - Yellow */
+#progressButton {
+background: #f4c430;
+color: #333;
+}
+
+/* 🎯 Goal - Purple */
+#goalButton,
+#setGoalButton {
+background: #8b5cf6;
+}
+
+/* 🔥 Streak - Orange */
+#streakButton {
+background: #f97316;
+}
+
+#streakButton:hover {
+background: #ea580c;
+}
+
+
+/* =========================
+FINAL PROJECT REVIEW BUTTONS
+========================= */
+
+/* 🤖 AI Study Plan - Blue */
+#studyPlanButton,
+.ai-study-plan-button {
+background: #2196f3 !important;
+color: white !important;
+}
+
+#studyPlanButton:hover,
+.ai-study-plan-button:hover {
+background: #1976d2 !important;
+}
+
+
+/* 🎯 Personalized Study Plan */
+.personalized-study-plan-button {
+background: #8b5cf6 !important;
+color: white !important;
+}
+
+.personalized-study-plan-button:hover {
+background: #7c3aed !important;
+}
+
+
+/* 🗺️ Topic Study Plan */
+.topic-study-plan-button {
+background: #2196f3 !important;
+color: white !important;
+}
+
+.topic-study-plan-button:hover {
+background: #1976d2 !important;
+}
+
+
+/* 📖 Review Topic - Blue */
+#recommendedStudyButton {
+background: #2196f3 !important;
+color: white !important;
+}
+
+#recommendedStudyButton:hover {
+background: #1976d2 !important;
+}
+
+
+/* 🧠 Review Weak Areas - Blue */
+#recommendedFlashcardButton {
+background: #2196f3 !important;
+color: white !important;
+}
+
+#recommendedFlashcardButton:hover {
+background: #1976d2 !important;
+}
+
+
+/* 📖 Study My Weak Areas - Blue */
+#reviewWeakAreasButton {
+background: #2196f3 !important;
+color: white !important;
+}
+
+#reviewWeakAreasButton:hover {
+background: #1976d2 !important;
+}
+
+
+/* 🧠 Make Weak Area Flashcards - Blue */
+#reviewWeakFlashcardsButton {
+background: #2196f3 !important;
+color: white !important;
+}
+
+#reviewWeakFlashcardsButton:hover {
+background: #1976d2 !important;
+}
+
+
+/* ❌ Review My Mistakes - Red */
+#allMistakesButton,
+#mistakeReviewButton,
+#aiAllMistakesButton {
+background: #e53935 !important;
+color: white !important;
+}
+
+#allMistakesButton:hover,
+#mistakeReviewButton:hover,
+#aiAllMistakesButton:hover {
+background: #c62828 !important;
+}
+
+
+/* 📥 Download Report */
+#downloadReportButton {
+background: #6b7280 !important;
+color: white !important;
+}
+
+#downloadReportButton:hover {
+background: #4b5563 !important;
+}
+
+
+/* =========================
+IMAGE STUDY
+========================= */
+
+.image-study-section {
+text-align: center;
+margin: 20px 0 25px;
+padding: 20px;
+border: 1px dashed #cfd5e2;
+border-radius: 16px;
+background: #fafbff;
+}
+
+.image-study-section > button {
+max-width: 300px;
+}
+
+#imageUploadArea {
+margin-top: 15px;
+}
+
+.image-upload-box {
+padding: 10px;
+}
+
+#imageInput {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background: white;
+}
+
+#imagePreview {
+margin-top: 15px;
+}
+
+.uploaded-image img {
+display: block;
+max-width: 100%;
+max-height: 400px;
+margin: 15px auto;
+border-radius: 14px;
+border: 1px solid #ddd;
+}
+
+.image-actions {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin-top: 15px;
+}
+
+.image-actions button {
+width: auto;
+min-width: 150px;
+}
+
+
+/* =========================
+STUDY TOOLS
+========================= */
+
+.tools-section {
+margin-top: 30px;
+padding-top: 20px;
+border-top: 1px solid #e1e4ea;
+}
+
+.tools-section h3 {
+margin-bottom: 15px;
+}
+
+
+/* =========================
+TOPIC STUDY PLAN
+========================= */
+
+.topic-study-plan-card {
+padding: 22px;
+margin: 15px 0 20px;
+border-radius: 16px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.topic-study-plan-card h3 {
+margin-top: 0;
+}
+
+.topic-study-plan-card p {
+line-height: 1.6;
+color: #666;
+}
+
+.topic-study-plan-input {
+width: 100%;
+padding: 14px;
+margin: 10px 0;
+border: 1px solid #cfd5e2;
+border-radius: 12px;
+font-size: 16px;
+outline: none;
+}
+
+.topic-study-plan-input:focus {
+border-color: #4f7cff;
+box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
+}
+
+.topic-study-plan-file {
+width: 100%;
+padding: 12px;
+margin: 10px 0 15px;
+border: 1px dashed #cfd5e2;
+border-radius: 12px;
+background: #fafbff;
+}
+
+.topic-study-plan-button {
+background: #2196f3 !important;
+color: white !important;
+}
+
+.topic-study-plan-button:hover {
+background: #1976d2 !important;
+}
+
+
+/* =========================
+RESULTS
+========================= */
+
+#result {
+margin-top: 25px;
+}
+
+.lesson {
+padding: 25px;
+border-radius: 18px;
+background: #f8f9fb;
+line-height: 1.75;
+}
+
+.lesson-section {
+margin-bottom: 25px;
+}
+
+.lesson-section:last-child {
+margin-bottom: 0;
+}
+
+.lesson-section h3 {
+margin-top: 0;
+margin-bottom: 10px;
+}
+
+.lesson p {
+margin: 0 0 15px;
+}
+
+.lesson ul {
+padding-left: 22px;
+}
+
+.lesson li {
+margin-bottom: 8px;
+}
+
+
+/* =========================
+RESULT HEADER
+========================= */
+
+.result-title {
+display: flex;
+align-items: center;
+gap: 14px;
+margin-bottom: 20px;
+}
+
+.result-title h2 {
+margin: 0;
+}
+
+.result-title p {
+margin: 4px 0 0;
+color: #777;
+}
+
+.big-icon {
+font-size: 35px;
+line-height: 1;
+}
+
+
+/* =========================
+AI QUESTION
+========================= */
+
+.ai-question-box {
+margin-top: 25px;
+padding: 20px;
+border-radius: 16px;
+background: white;
+border: 1px solid #dfe4ec;
+}
+
+.ai-question-box h3 {
+margin-top: 0;
+}
+
+.ai-question {
+font-size: 18px;
+font-weight: bold;
+line-height: 1.5;
+margin-bottom: 18px;
+}
+
+
+/* =========================
+SUGGESTION ANSWERS
+========================= */
+
+.suggestion-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-bottom: 15px;
+}
+
+.suggestion-button {
+margin: 0;
+background: #eef2ff;
+color: #334155;
+border: 2px solid #dbe2ff;
+}
+
+.suggestion-button:hover {
+background: #e0e7ff;
+}
+
+
+/* =========================
+AI CHAT
+========================= */
+
+.ai-chat-box {
+margin-top: 15px;
+}
+
+.ai-chat-input {
+width: 100%;
+min-height: 90px;
+padding: 14px;
+border: 1px solid #cfd5e2;
+border-radius: 12px;
+font-family: Arial, sans-serif;
+font-size: 16px;
+resize: vertical;
+outline: none;
+}
+
+.ai-chat-input:focus {
+border-color: #4f7cff;
+box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
+}
+
+.ask-ai-button {
+background: #4f7cff;
+}
+
+.ai-response {
+margin-top: 15px;
+padding: 15px;
+border-radius: 12px;
+background: #f1f5ff;
+line-height: 1.7;
+}
+
+
+/* =========================
+QUIZ
+========================= */
+
+.quiz-progress {
+margin-bottom: 20px;
+padding: 10px;
+border-radius: 10px;
+background: #eef1f7;
+text-align: center;
+font-weight: bold;
+color: #555;
+}
+
+.quiz-question {
+margin-bottom: 25px;
+padding: 18px;
+border-radius: 14px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.quiz-question h3 {
+margin-top: 0;
+line-height: 1.5;
+}
+
+.quiz-option {
+display: block;
+width: 100%;
+margin: 8px 0;
+background: #4f7cff;
+}
+
+.quiz-option:hover {
+background: #416ce5;
+}
+
+.quiz-option:disabled {
+cursor: default;
+opacity: 1;
+}
+
+.quiz-option.correct-answer {
+border: 2px solid #2e9d59;
+background: #43a047 !important;
+color: white;
+}
+
+.quiz-option.wrong-answer {
+border: 2px solid #d9534f;
+background: #e53935 !important;
+color: white;
+}
+
+
+/* =========================
+QUIZ EXPLANATION
+========================= */
+
+.quiz-explanation {
+margin-top: 15px;
+padding: 15px;
+border-radius: 12px;
+background: #f8f9fb;
+line-height: 1.65;
+}
+
+.quiz-explanation strong {
+display: block;
+margin-bottom: 5px;
+}
+
+.correct-explanation {
+border-left: 5px solid #22a06b;
+}
+
+.wrong-explanation {
+border-left: 5px solid #d9534f;
+}
+
+
+/* =========================
+QUIZ SCORE
+========================= */
+
+.quiz-final-score {
+margin-top: 30px;
+padding: 25px;
+border-radius: 18px;
+background: #eef2ff;
+text-align: center;
+}
+
+.score-circle {
+width: 125px;
+height: 125px;
+margin: 0 auto 15px;
+border-radius: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: white;
+border: 7px solid #4f7cff;
+}
+
+.score-circle strong {
+font-size: 32px;
+}
+
+.score-circle span {
+font-size: 13px;
+color: #777;
+}
+
+.score-details h2 {
+margin-bottom: 5px;
+}
+
+.score-details p {
+color: #666;
+}
+
+.score-stats {
+display: flex;
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 15px;
+}
+
+.correct-stat,
+.wrong-stat {
+padding: 9px 13px;
+border-radius: 10px;
+background: white;
+font-weight: bold;
+}
+
+
+/* =========================
+QUIZ BUTTONS
+========================= */
+
+.next-question-button,
+.retry-quiz-button,
+#nextQuestionButton,
+#retryQuizButton {
+background: #2196f3 !important;
+color: white !important;
+border: none !important;
+padding: 12px 20px;
+border-radius: 10px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 15px;
+}
+
+.next-question-button:hover,
+.retry-quiz-button:hover,
+#nextQuestionButton:hover,
+#retryQuizButton:hover {
+background: #1976d2 !important;
+}
+
+
+/* =========================
+FLASHCARDS
+========================= */
+
+.flashcard {
+position: relative;
+margin: 15px 0;
+padding: 20px;
+border-radius: 15px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.flashcard-number {
+display: inline-block;
+margin-bottom: 8px;
+color: #4f7cff;
+font-weight: bold;
+}
+
+.flashcard h3 {
+margin-top: 5px;
+}
+
+.flashcard-answer {
+display: none;
+margin-top: 15px;
+padding: 12px;
+border-radius: 10px;
+background: #eef8f1;
+}
+
+.flashcard-answer.show {
+display: block;
+}
+
+.show-answer-button {
+background: #667085;
+}
+
+
+/* =========================
+STUDY HISTORY
+========================= */
+
+.history-list {
+margin-bottom: 20px;
+}
+
+.history-item {
+display: flex;
+align-items: center;
+gap: 14px;
+padding: 14px;
+margin-bottom: 10px;
+border-radius: 12px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.history-icon {
+font-size: 25px;
+}
+
+.history-info {
+display: flex;
+flex-direction: column;
+gap: 3px;
+}
+
+.history-info strong {
+word-break: break-word;
+}
+
+.history-info span,
+.history-info small {
+color: #777;
+}
+
+.danger-button {
+background: #d9534f;
+}
+
+.danger-button:hover {
+background: #c94541;
+}
+
+.empty-state {
+padding: 25px;
+text-align: center;
+border-radius: 15px;
+background: white;
+border: 1px dashed #ccc;
+color: #777;
+}
+
+
+/* =========================
+PROGRESS DASHBOARD
+========================= */
+
+.dashboard-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+margin-bottom: 25px;
+}
+
+.stat-card {
+padding: 18px;
+border-radius: 15px;
+background: white;
+border: 1px solid #e1e4ea;
+text-align: center;
+}
+
+.stat-card span {
+display: block;
+font-size: 25px;
+margin-bottom: 8px;
+}
+
+.stat-card strong {
+display: block;
+font-size: 25px;
+}
+
+.stat-card small {
+color: #777;
+}
+
+.dashboard-section {
+margin-top: 20px;
+padding: 18px;
+border-radius: 15px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.dashboard-section h3 {
+margin-top: 0;
+}
+
+.activity-row {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+padding: 11px 0;
+border-bottom: 1px solid #e1e4ea;
+}
+
+.activity-row:last-child {
+border-bottom: none;
+}
+
+
+/* =========================
+PROGRESS BAR
+========================= */
+
+.progress-bar {
+width: 100%;
+height: 16px;
+overflow: hidden;
+border-radius: 20px;
+background: #ddd;
+margin: 15px 0 8px;
+}
+
+.progress-fill {
+height: 100%;
+border-radius: 20px;
+background: #4f7cff;
+transition: width 0.4s ease;
+}
+
+.progress-text {
+color: #666;
+font-size: 14px;
+}
+
+
+/* =========================
+STUDY GOAL
+========================= */
+
+.goal-card {
+padding: 22px;
+margin: 15px 0 20px;
+border-radius: 16px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.goal-card h3 {
+margin-top: 0;
+}
+
+.goal-progress-text {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+margin-top: 15px;
+}
+
+.goal-progress-text strong {
+font-size: 22px;
+}
+
+.goal-progress-text span {
+color: #777;
+}
+
+.goal-complete {
+font-weight: bold;
+color: #218838;
+}
+
+
+/* =========================
+CUSTOM STUDY GOAL
+========================= */
+
+.custom-goal-box {
+margin-top: 15px;
+}
+
+.custom-goal-input {
+width: 100%;
+padding: 14px;
+border: 1px solid #cfd5e2;
+border-radius: 12px;
+font-size: 16px;
+outline: none;
+}
+
+.custom-goal-input:focus {
+border-color: #8b5cf6;
+box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+.set-goal-button {
+background: #8b5cf6 !important;
+color: white !important;
+margin-top: 10px;
+}
+
+.goal-or-text {
+text-align: center;
+color: #777;
+margin: 18px 0 12px;
+}
+
+
+/* =========================
+RESET STUDY SESSIONS
+========================= */
+
+.reset-sessions-button {
+background: #f97316 !important;
+color: white !important;
+border: none !important;
+margin-top: 15px;
+}
+
+.reset-sessions-button:hover {
+background: #ea580c !important;
+}
+
+
+/* =========================
+RESET STUDY GOAL
+========================= */
+
+.reset-goal-button {
+background: #e53935 !important;
+color: white !important;
+border: none !important;
+margin-top: 8px;
+}
+
+.reset-goal-button:hover {
+background: #c62828 !important;
+}
+
+
+/* =========================
+STUDY STREAK
+========================= */
+
+.streak-main {
+text-align: center;
+padding: 25px;
+margin-bottom: 20px;
+border-radius: 18px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.streak-main strong {
+display: block;
+font-size: 55px;
+}
+
+.streak-main span {
+color: #777;
+}
+
+.streak-stats {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+}
+
+.streak-stats div {
+text-align: center;
+padding: 15px 5px;
+border-radius: 12px;
+background: white;
+border: 1px solid #e1e4ea;
+}
+
+.streak-stats strong {
+display: block;
+font-size: 22px;
+}
+
+.streak-stats span {
+color: #777;
+font-size: 12px;
+}
+
+.streak-message {
+margin-top: 20px;
+padding: 14px;
+border-radius: 12px;
+background: white;
+border: 1px solid #e1e4ea;
+text-align: center;
+}
+
+
+/* =========================
+LOADING
+========================= */
+
+.loading {
+padding: 25px;
+text-align: center;
+color: #666;
+}
+
+.loading span {
+display: inline-block;
+animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+0%,
+100% {
+transform: translateY(0);
+}
+
+50% {
+transform: translateY(-5px);
+}
+}
+
+
+/* =========================
+UPLOADED NOTES BUTTONS
+========================= */
+
+/* Study These Notes - Red */
+.image-study-button {
+background: #e53935 !important;
+color: white !important;
+border: none !important;
+}
+
+.image-study-button:hover {
+background: #c62828 !important;
+}
+
+
+/* Quiz Me - Yellow */
+.image-quiz-button {
+background: #fbc02d !important;
+color: #222 !important;
+border: none !important;
+}
+
+.image-quiz-button:hover {
+background: #f9a825 !important;
+}
+
+
+/* Flashcards - Green */
+.image-flashcard-button {
+background: #43a047 !important;
+color: white !important;
+border: none !important;
+}
+
+.image-flashcard-button:hover {
+background: #2e7d32 !important;
+}
+
+
+/* =========================
+QUIZ ANSWER BUTTONS
+========================= */
+
+.quiz-option:disabled {
+opacity: 1 !important;
+}
+
+
+/* Correct answer - Green */
+.quiz-option.correct-answer {
+background: #43a047 !important;
+color: white !important;
+border-color: #43a047 !important;
+}
+
+
+/* Wrong answer - Red */
+.quiz-option.wrong-answer {
+background: #e53935 !important;
+color: white !important;
+border-color: #e53935 !important;
+}
+
+
+/* =========================
+QUIZ PROGRESS CHART
+========================= */
+
+.score-chart {
+display: flex;
+align-items: flex-end;
+gap: 12px;
+height: 220px;
+padding: 20px 10px 10px;
+overflow-x: auto;
+}
+
+.chart-item {
+min-width: 55px;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+gap: 8px;
+}
+
+.chart-bar {
+width: 42px;
+min-height: 10px;
+background: #4f7cff;
+border-radius: 8px 8px 0 0;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+position: relative;
+}
+
+.chart-bar span {
+position: absolute;
+top: -24px;
+font-size: 12px;
+font-weight: bold;
+}
+
+.chart-item small {
+max-width: 70px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+body {
+padding: 15px 10px;
+}
+
+.container {
+padding: 20px 15px;
+border-radius: 15px;
+}
+
+h1 {
+font-size: 27px;
+}
+
+.lesson {
+padding: 18px;
+}
+
+.dashboard-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.streak-stats {
+grid-template-columns: 1fr;
+}
+
+.goal-progress-text {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.image-actions {
+flex-direction: column;
+}
+
+.image-actions button {
+width: 100%;
+}
+
+.suggestion-grid {
+grid-template-columns: 1fr;
+}
+}
+#retryQuizButton,
+#reviewTopicButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#retryQuizButton:hover,
+#reviewTopicButton:hover {
+    background-color: #0069d9;
+}

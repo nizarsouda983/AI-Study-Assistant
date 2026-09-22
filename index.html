@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Study Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 AI Study Assistant</h1>
+
+    <p>Your personal AI study helper.</p>
+
+    <h3>What do you want to study?</h3>
+
+    <input
+        type="text"
+        id="topicInput"
+        placeholder="Example: photosynthesis, World War II, algebra..."
+    >
+
+    <div class="image-study-section">
+
+        <button id="imageButton" type="button">
+            📷 Upload Your Notes
+        </button>
+
+        <div id="imageUploadArea"></div>
+
+        <div id="imageActions"></div>
+
+    </div>
+
+    <p>Choose what you want the AI to do:</p>
+
+    <button id="studyButton" type="button">
+        📖 Start Studying
+    </button>
+
+    <button id="quizButton" type="button">
+        📝 Take a Quiz
+    </button>
+
+    <button id="flashcardButton" type="button">
+        🧠 Flashcards
+    </button>
+
+
+    <div class="tools-section">
+
+        <h3>📈 Your Study Tools</h3>
+
+        <button id="historyButton" type="button">
+            📚 Study History
+        </button>
+
+        <button id="progressButton" type="button">
+            📊 Progress Dashboard
+        </button>
+
+        <button id="goalButton" type="button">
+            🎯 Study Goal
+        </button>
+
+        <button id="streakButton" type="button">
+            🔥 Study Streak
+        </button>
+
+    </div>
+
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
