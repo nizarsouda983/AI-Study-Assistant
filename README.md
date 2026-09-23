@@ -37,3 +37,7 @@ The OpenAI API key is stored in a `.env` file and is not included in the GitHub 
 ## 👨‍💻 Author
 
 Nizar
+
+## 📸 App Screenshot
+
+![AI Study Assistant](ai-study-assistant.png)
