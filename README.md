@@ -2,6 +2,16 @@
 
 AI Study Assistant is a web app that helps students learn and practice different subjects using AI. It can create study lessons, quizzes, flashcards, and help students ask questions about what they are learning.
 
+## 🚀 Project Highlights
+
+- Built a full-stack web app using JavaScript and Node.js
+- Connected the app to the OpenAI API
+- Created AI-generated lessons, quizzes, and flashcards
+- Added an AI tutor for asking questions
+- Added note upload features for studying
+- Added study history, progress tracking, goals, and streaks
+- Used Git and GitHub for version control
+
 ## ✨ Features
 
 - 📖 AI-generated study lessons
