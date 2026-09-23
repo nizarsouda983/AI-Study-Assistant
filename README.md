@@ -1,6 +1,6 @@
 # 📚 AI Study Assistant
 
-AI Study Assistant is a web app that helps students study different topics using AI.
+AI Study Assistant is a web app that helps students learn and practice different subjects using AI. It can create study lessons, quizzes, flashcards, and help students ask questions about what they are learning.
 
 ## ✨ Features
 
