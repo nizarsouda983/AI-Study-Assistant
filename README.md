@@ -45,7 +45,9 @@ AI Study Assistant is a web app that helps students learn and practice different
 
 ## 🔐 Security
 
-The OpenAI API key is stored in a `.env` file and is not included in the GitHub repository.
+The OpenAI API key is stored in a local `.env` file and is not included in the GitHub repository.
+
+A `.gitignore` file is used to prevent private files and dependencies from being uploaded.
 
 ## 👨‍💻 Author
 
