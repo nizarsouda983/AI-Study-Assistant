@@ -43,6 +43,14 @@ AI Study Assistant is a web app that helps students learn and practice different
 5. Ask the AI questions about the lesson or practice with a quiz.
 6. Track your study history, progress, goals, and streaks.
 
+## 💻 Run Locally
+
+1. Clone the repository.
+2. Install the required packages with `npm install`.
+3. Create a `.env` file and add your OpenAI API key.
+4. Start the server with `node server.js`.
+5. Open `http://localhost:3000` in your browser.
+
 ## 🔐 Security
 
 The OpenAI API key is stored in a local `.env` file and is not included in the GitHub repository.
