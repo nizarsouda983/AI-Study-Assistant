@@ -26,12 +26,13 @@ AI Study Assistant is a web app that helps students learn and practice different
 
 ## 🛠️ Technologies
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Express
-- OpenAI API
+- HTML — structure and layout
+- CSS — styling and design
+- JavaScript — app functionality
+- Node.js — backend server
+- Express — API routes and server handling
+- OpenAI API — AI-generated study content
+- Git & GitHub — version control
 
 ## 🚀 How It Works
 
