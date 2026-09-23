@@ -36,9 +36,11 @@ AI Study Assistant is a web app that helps students learn and practice different
 ## 🚀 How It Works
 
 1. Enter a topic you want to study.
-2. Choose an option like Study, Quiz, or Flashcards.
-3. The AI creates study material based on your topic.
-4. You can ask the AI questions and practice what you learned.
+2. Choose Study, Quiz, or Flashcards.
+3. The app sends the topic to the AI.
+4. The AI creates study material based on that topic.
+5. Ask the AI questions about the lesson or practice with a quiz.
+6. Track your study history, progress, goals, and streaks.
 
 ## 🔐 Security
 
