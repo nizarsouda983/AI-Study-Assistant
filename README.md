@@ -1,8 +1,8 @@
-# 📚 AI Study Assistant
+# AI Study Assistant
 
 AI Study Assistant is a web app that helps students learn and practice different subjects using AI. It can create study lessons, quizzes, flashcards, and help students ask questions about what they are learning.
 
-## 🚀 Project Highlights
+## Project Highlights
 
 - Built a full-stack web app using JavaScript and Node.js
 - Connected the app to the OpenAI API
@@ -12,19 +12,19 @@ AI Study Assistant is a web app that helps students learn and practice different
 - Added study history, progress tracking, goals, and streaks
 - Used Git and GitHub for version control
 
-## ✨ Features
+## Features
 
-- 📖 AI-generated study lessons
-- 📝 AI-generated quizzes
-- 🧠 AI-generated flashcards
-- 📷 Upload notes and study from them
-- 💬 Ask the AI questions about your lesson
-- 📚 Study history
-- 📊 Progress tracking
-- 🎯 Study goals
-- 🔥 Study streaks
+- AI-generated study lessons
+- AI-generated quizzes
+- AI-generated flashcards
+- Upload notes and study from them
+- Ask the AI questions about your lesson
+- Study history
+- Progress tracking
+- Study goals
+- Study streaks
 
-## 🛠️ Technologies
+## Technologies
 
 - HTML — structure and layout
 - CSS — styling and design
@@ -34,7 +34,7 @@ AI Study Assistant is a web app that helps students learn and practice different
 - OpenAI API — AI-generated study content
 - Git & GitHub — version control
 
-## 🚀 How It Works
+## How It Works
 
 1. Enter a topic you want to study.
 2. Choose Study, Quiz, or Flashcards.
@@ -43,7 +43,7 @@ AI Study Assistant is a web app that helps students learn and practice different
 5. Ask the AI questions about the lesson or practice with a quiz.
 6. Track your study history, progress, goals, and streaks.
 
-## 💻 Run Locally
+## Run Locally
 
 1. Clone the repository.
 2. Install the required packages with `npm install`.
@@ -51,16 +51,16 @@ AI Study Assistant is a web app that helps students learn and practice different
 4. Start the server with `node server.js`.
 5. Open `http://localhost:3000` in your browser.
 
-## 🔐 Security
+## Security
 
 The OpenAI API key is stored in a local `.env` file and is not included in the GitHub repository.
 
 A `.gitignore` file is used to prevent private files and dependencies from being uploaded.
 
-## 👨‍💻 Author
+## Author
 
 Nizar
 
-## 📸 App Screenshot
+## App Screenshot
 
 ![AI Study Assistant](ai-study-assistant.png)
