@@ -19,11 +19,6 @@ const client = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
 
-
-/* =========================
-AI HELPER
-========================= */
-
 async function askAI(prompt) {
 
     const response =
@@ -77,11 +72,6 @@ async function askAIWithImage(
     return response.output_text;
 }
 
-
-/* =========================
-SIMPLE WRITING RULES
-========================= */
-
 const SIMPLE_WRITING_RULES = `
 
 IMPORTANT WRITING RULES:
@@ -112,11 +102,6 @@ IMPORTANT WRITING RULES:
 - Stay on the exact topic the student chose.
 
 `;
-
-
-/* =========================
-CLEAN JSON
-========================= */
 
 function cleanJSON(text) {
 
@@ -152,11 +137,6 @@ function cleanJSON(text) {
     );
 }
 
-
-/* =========================
-HOME
-========================= */
-
 app.get(
     "/",
     (req, res) => {
@@ -167,11 +147,6 @@ app.get(
 
     }
 );
-
-
-/* =========================
-STUDY
-========================= */
 
 app.post(
     "/api/study",
@@ -266,11 +241,6 @@ Return ONLY valid JSON in this format:
 
     }
 );
-
-
-/* =========================
-AI TUTOR
-========================= */
 
 app.post(
     "/api/tutor",
@@ -396,11 +366,6 @@ Return ONLY valid JSON:
     }
 );
 
-
-/* =========================
-QUIZ
-========================= */
-
 app.post(
     "/api/quiz",
     async (req, res) => {
@@ -498,11 +463,46 @@ Return ONLY valid JSON:
 
 
             const data =
-                cleanJSON(aiText);
+    cleanJSON(aiText);
 
 
-            res.json(data);
+data.questions.forEach(question => {
 
+    const correctChoice =
+        question.choices[
+            question.correctAnswerIndex
+        ];
+
+    for (
+        let i = question.choices.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [
+            question.choices[i],
+            question.choices[j]
+        ] = [
+            question.choices[j],
+            question.choices[i]
+        ];
+
+    }
+
+    question.correctAnswerIndex =
+        question.choices.indexOf(
+            correctChoice
+        );
+
+});
+
+
+res.json(data);
 
         } catch (error) {
 
@@ -522,11 +522,6 @@ Return ONLY valid JSON:
 
     }
 );
-
-
-/* =========================
-FLASHCARDS
-========================= */
 
 app.post(
     "/api/flashcards",
@@ -619,11 +614,6 @@ Return ONLY valid JSON:
     }
 );
 
-
-/* =========================
-IMAGE STUDY
-========================= */
-
 app.post(
     "/api/image-study",
     async (req, res) => {
@@ -714,11 +704,6 @@ Return ONLY valid JSON:
 
     }
 );
-
-
-/* =========================
-IMAGE QUIZ
-========================= */
 
 app.post(
     "/api/image-quiz",
@@ -833,11 +818,6 @@ Return ONLY valid JSON:
     }
 );
 
-
-/* =========================
-IMAGE FLASHCARDS
-========================= */
-
 app.post(
     "/api/image-flashcards",
     async (req, res) => {
@@ -927,11 +907,6 @@ Return ONLY valid JSON:
 
     }
 );
-
-
-/* =========================
-SERVER
-========================= */
 
 const PORT =
     process.env.PORT || 3000;

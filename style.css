@@ -1,6 +1,3 @@
-/* =========================
-AI STUDY ASSISTANT
-========================= */
 
 * {
 box-sizing: border-box;
@@ -24,11 +21,6 @@ border-radius: 20px;
 box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-
-/* =========================
-HEADER
-========================= */
-
 h1 {
 margin-top: 0;
 margin-bottom: 8px;
@@ -46,11 +38,6 @@ h3 {
 margin-top: 25px;
 }
 
-
-/* =========================
-TOPIC INPUT
-========================= */
-
 #topicInput {
 width: 100%;
 padding: 15px;
@@ -65,11 +52,6 @@ outline: none;
 border-color: #4f7cff;
 box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
 }
-
-
-/* =========================
-BUTTONS
-========================= */
 
 button {
 width: 100%;
@@ -103,11 +85,6 @@ transform: none;
 box-shadow: none;
 opacity: 0.65;
 }
-
-
-/* =========================
-BUTTON COLORS
-========================= */
 
 /* 📖 Start Studying - Blue */
 #studyButton,
@@ -157,9 +134,6 @@ background: #f97316;
 #streakButton:hover {
 background: #ea580c;
 }
-/* =========================
-IMAGE STUDY
-========================= */
 
 .image-study-section {
 text-align: center;
@@ -216,11 +190,6 @@ width: auto;
 min-width: 150px;
 }
 
-
-/* =========================
-STUDY TOOLS
-========================= */
-
 .tools-section {
 margin-top: 30px;
 padding-top: 20px;
@@ -230,11 +199,6 @@ border-top: 1px solid #e1e4ea;
 .tools-section h3 {
 margin-bottom: 15px;
 }
-
-
-/* =========================
-TOPIC STUDY PLAN
-========================= */
 
 .topic-study-plan-card {
 padding: 22px;
@@ -286,11 +250,6 @@ color: white !important;
 background: #1976d2 !important;
 }
 
-
-/* =========================
-RESULTS
-========================= */
-
 #result {
 margin-top: 25px;
 }
@@ -327,11 +286,6 @@ padding-left: 22px;
 margin-bottom: 8px;
 }
 
-
-/* =========================
-RESULT HEADER
-========================= */
-
 .result-title {
 display: flex;
 align-items: center;
@@ -353,11 +307,6 @@ font-size: 35px;
 line-height: 1;
 }
 
-
-/* =========================
-AI QUESTION
-========================= */
-
 .ai-question-box {
 margin-top: 25px;
 padding: 20px;
@@ -377,11 +326,6 @@ line-height: 1.5;
 margin-bottom: 18px;
 }
 
-
-/* =========================
-SUGGESTION ANSWERS
-========================= */
-
 .suggestion-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -399,11 +343,6 @@ border: 2px solid #dbe2ff;
 .suggestion-button:hover {
 background: #e0e7ff;
 }
-
-
-/* =========================
-AI CHAT
-========================= */
 
 .ai-chat-box {
 margin-top: 15px;
@@ -437,11 +376,6 @@ border-radius: 12px;
 background: #f1f5ff;
 line-height: 1.7;
 }
-
-
-/* =========================
-QUIZ
-========================= */
 
 .quiz-progress {
 margin-bottom: 20px;
@@ -494,11 +428,6 @@ background: #e53935 !important;
 color: white;
 }
 
-
-/* =========================
-QUIZ EXPLANATION
-========================= */
-
 .quiz-explanation {
 margin-top: 15px;
 padding: 15px;
@@ -519,11 +448,6 @@ border-left: 5px solid #22a06b;
 .wrong-explanation {
 border-left: 5px solid #d9534f;
 }
-
-
-/* =========================
-QUIZ SCORE
-========================= */
 
 .quiz-final-score {
 margin-top: 30px;
@@ -579,11 +503,6 @@ background: white;
 font-weight: bold;
 }
 
-
-/* =========================
-QUIZ BUTTONS
-========================= */
-
 .next-question-button,
 .retry-quiz-button,
 #nextQuestionButton,
@@ -605,11 +524,6 @@ margin-top: 15px;
 #retryQuizButton:hover {
 background: #1976d2 !important;
 }
-
-
-/* =========================
-FLASHCARDS
-========================= */
 
 .flashcard {
 position: relative;
@@ -646,11 +560,6 @@ display: block;
 .show-answer-button {
 background: #667085;
 }
-
-
-/* =========================
-STUDY HISTORY
-========================= */
 
 .history-list {
 margin-bottom: 20px;
@@ -702,11 +611,6 @@ background: white;
 border: 1px dashed #ccc;
 color: #777;
 }
-
-
-/* =========================
-PROGRESS DASHBOARD
-========================= */
 
 .dashboard-grid {
 display: grid;
@@ -762,11 +666,6 @@ border-bottom: 1px solid #e1e4ea;
 border-bottom: none;
 }
 
-
-/* =========================
-PROGRESS BAR
-========================= */
-
 .progress-bar {
 width: 100%;
 height: 16px;
@@ -787,11 +686,6 @@ transition: width 0.4s ease;
 color: #666;
 font-size: 14px;
 }
-
-
-/* =========================
-STUDY GOAL
-========================= */
 
 .goal-card {
 padding: 22px;
@@ -826,11 +720,6 @@ font-weight: bold;
 color: #218838;
 }
 
-
-/* =========================
-CUSTOM STUDY GOAL
-========================= */
-
 .custom-goal-box {
 margin-top: 15px;
 }
@@ -861,11 +750,6 @@ color: #777;
 margin: 18px 0 12px;
 }
 
-
-/* =========================
-RESET STUDY SESSIONS
-========================= */
-
 .reset-sessions-button {
 background: #f97316 !important;
 color: white !important;
@@ -877,11 +761,6 @@ margin-top: 15px;
 background: #ea580c !important;
 }
 
-
-/* =========================
-RESET STUDY GOAL
-========================= */
-
 .reset-goal-button {
 background: #e53935 !important;
 color: white !important;
@@ -892,11 +771,6 @@ margin-top: 8px;
 .reset-goal-button:hover {
 background: #c62828 !important;
 }
-
-
-/* =========================
-STUDY STREAK
-========================= */
 
 .streak-main {
 text-align: center;
@@ -949,11 +823,6 @@ border: 1px solid #e1e4ea;
 text-align: center;
 }
 
-
-/* =========================
-LOADING
-========================= */
-
 .loading {
 padding: 25px;
 text-align: center;
@@ -975,11 +844,6 @@ transform: translateY(0);
 transform: translateY(-5px);
 }
 }
-
-
-/* =========================
-UPLOADED NOTES BUTTONS
-========================= */
 
 /* Study These Notes - Red */
 .image-study-button {
@@ -1016,11 +880,6 @@ border: none !important;
 background: #2e7d32 !important;
 }
 
-
-/* =========================
-QUIZ ANSWER BUTTONS
-========================= */
-
 .quiz-option:disabled {
 opacity: 1 !important;
 }
@@ -1040,11 +899,6 @@ background: #e53935 !important;
 color: white !important;
 border-color: #e53935 !important;
 }
-
-
-/* =========================
-QUIZ PROGRESS CHART
-========================= */
 
 .score-chart {
 display: flex;
@@ -1089,11 +943,6 @@ overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 }
-
-
-/* =========================
-MOBILE
-========================= */
 
 @media (max-width: 600px) {
 

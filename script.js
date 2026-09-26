@@ -25,11 +25,6 @@ let currentQuizIndex = 0;
 let quizCorrect = 0;
 let quizWrong = 0;
 
-
-/* =========================
-LOCAL STORAGE
-========================= */
-
 let studyHistory =
     JSON.parse(localStorage.getItem("studyHistory")) || [];
 
@@ -51,10 +46,6 @@ let quizResults =
 let mistakeHistory =
     JSON.parse(localStorage.getItem("mistakeHistory")) || [];
 
-
-/* =========================
-HELPERS
-========================= */
 
 function escapeHTML(value) {
     return String(value ?? "")
@@ -276,11 +267,6 @@ function getCorrectAnswerIndex(question) {
     return -1;
 }
 
-
-/* =========================
-HISTORY
-========================= */
-
 function saveHistory(topic, type) {
 
     studyHistory.unshift({
@@ -298,11 +284,6 @@ function saveHistory(topic, type) {
     );
 }
 
-
-/* =========================
-STUDY SESSIONS
-========================= */
-
 function updateStudySession() {
 
     studySessions++;
@@ -314,11 +295,6 @@ function updateStudySession() {
 
     updateStreak();
 }
-
-
-/* =========================
-STREAK
-========================= */
 
 function updateStreak() {
 
@@ -370,11 +346,6 @@ function updateStreak() {
     );
 }
 
-
-/* =========================
-QUIZ RESULTS
-========================= */
-
 function saveQuizResult(
     topic,
     correct,
@@ -407,11 +378,6 @@ function saveQuizResult(
     );
 }
 
-
-/* =========================
-MISTAKES
-========================= */
-
 function saveMistake(
     topic,
     question,
@@ -439,11 +405,6 @@ function saveMistake(
         JSON.stringify(mistakeHistory)
     );
 }
-
-
-/* =========================
-REMOVE OLD BUTTONS
-========================= */
 
 function removeOldStudyToolButtons() {
 
@@ -484,11 +445,6 @@ function removeOldStudyToolButtons() {
 
         });
 }
-
-
-/* =========================
-IMAGE UPLOAD
-========================= */
 
 if (imageButton) {
 
@@ -615,11 +571,6 @@ function handleImageUpload(event) {
 
     reader.readAsDataURL(file);
 }
-
-
-/* =========================
-START STUDYING
-========================= */
 
 if (studyButton) {
 
@@ -756,11 +707,6 @@ async function startStudying() {
     }
 }
 
-
-/* =========================
-AI TUTOR
-========================= */
-
 async function askTutor(message) {
 
     const responseBox =
@@ -883,11 +829,6 @@ async function askTutor(message) {
         `;
     }
 }
-
-
-/* =========================
-DISPLAY LESSON
-========================= */
 
 function displayLesson(text) {
 
@@ -1069,11 +1010,6 @@ function displayLesson(text) {
         );
 }
 
-
-/* =========================
-QUIZ
-========================= */
-
 if (quizButton) {
 
     quizButton.addEventListener(
@@ -1205,11 +1141,6 @@ async function startQuiz() {
         `;
     }
 }
-
-
-/* =========================
-DISPLAY QUIZ QUESTION
-========================= */
 
 function displayQuizQuestion() {
 
@@ -1363,11 +1294,6 @@ function displayQuizQuestion() {
 
         });
 }
-
-
-/* =========================
-ANSWER QUIZ
-========================= */
 
 function answerQuiz(
     selectedIndex
@@ -1574,11 +1500,6 @@ function answerQuiz(
         );
 }
 
-
-/* =========================
-FINISH QUIZ
-========================= */
-
 function finishQuiz() {
 
     const total =
@@ -1705,11 +1626,6 @@ function finishQuiz() {
             startStudying
         );
 }
-
-
-/* =========================
-FLASHCARDS
-========================= */
 
 if (flashcardButton) {
 
@@ -1978,11 +1894,6 @@ function displayFlashcards(cards) {
         });
 }
 
-
-/* =========================
-IMAGE STUDY
-========================= */
-
 async function startImageStudy() {
 
     if (!uploadedImage) {
@@ -2114,11 +2025,6 @@ async function startImageStudy() {
         `;
     }
 }
-
-
-/* =========================
-IMAGE QUIZ
-========================= */
 
 async function startImageQuiz() {
 
@@ -2254,11 +2160,6 @@ async function startImageQuiz() {
     }
 }
 
-
-/* =========================
-IMAGE FLASHCARDS
-========================= */
-
 async function startImageFlashcards() {
 
     if (!uploadedImage) {
@@ -2375,11 +2276,6 @@ async function startImageFlashcards() {
         `;
     }
 }
-
-
-/* =========================
-HISTORY
-========================= */
 
 if (historyButton) {
 
@@ -2516,11 +2412,6 @@ function showHistory() {
         );
 }
 
-
-/* =========================
-PROGRESS CHART
-========================= */
-
 function createProgressChart() {
 
     const results =
@@ -2637,11 +2528,6 @@ function createProgressChart() {
     return html;
 }
 
-
-/* =========================
-RESET PROGRESS
-========================= */
-
 function resetAllProgress() {
 
     const confirmed =
@@ -2712,11 +2598,6 @@ function resetAllProgress() {
         "Your progress was cleared. Your streak was kept. 🔥"
     );
 }
-
-
-/* =========================
-PROGRESS DASHBOARD
-========================= */
 
 if (progressButton) {
 
@@ -3048,11 +2929,6 @@ function showProgress() {
     }
 }
 
-
-/* =========================
-DOWNLOAD STUDY REPORT
-========================= */
-
 function downloadStudyReport() {
 
     const totalQuestions =
@@ -3213,11 +3089,6 @@ function downloadStudyReport() {
         url
     );
 }
-
-
-/* =========================
-GOAL
-========================= */
 
 if (goalButton) {
 
@@ -3537,11 +3408,6 @@ function showGoal() {
     }
 }
 
-
-/* =========================
-STREAK
-========================= */
-
 if (streakButton) {
 
     streakButton.addEventListener(
@@ -3613,9 +3479,5 @@ if (streakButton) {
     );
 }
 
-
-/* =========================
-REMOVE OLD BUTTONS
-========================= */
 
 removeOldStudyToolButtons();
